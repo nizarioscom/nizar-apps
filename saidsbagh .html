@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sbagh Darb - Technicien en Peinture Professionnelle</title>
+<script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #3b82f6 0%, #10b981 50%, #f59e0b 100%);
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .solution-card {
+            transition: all 0.3s ease;
+        }
+        .solution-card:hover {
+            transform: scale(1.03);
+        }
+        /* 3D Multicolor Logo */
+        .logo-3d {
+            display: inline-block;
+            position: relative;
+            transform-style: preserve-3d;
+            perspective: 800px;
+        }
+        .logo-3d-front {
+            font-weight: 900;
+            font-size: 28px;
+            letter-spacing: 0.5px;
+            background: linear-gradient(90deg, #ff4d4d, #ff9f1a, #ffd31a, #21d4fd, #b721ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            transform: rotateX(8deg) rotateY(-8deg) translateZ(8px);
+            filter: drop-shadow(0 6px 10px rgba(0,0,0,0.15));
+            text-shadow:
+                1px 1px 0 rgba(0,0,0,0.05),
+                2px 2px 0 rgba(0,0,0,0.05),
+                3px 3px 0 rgba(0,0,0,0.05),
+                4px 4px 0 rgba(0,0,0,0.05);
+            white-space: nowrap;
+        }
+        .logo-accent {
+            background: linear-gradient(90deg, #12c2e9, #c471ed, #f64f59);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        @media (min-width: 1024px) {
+            .logo-3d-front { font-size: 34px; }
+        }
+    </style>
+</head>
+<body class="font-sans antialiased bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-24 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="logo-3d" aria-label="Sbagh Darb">
+                        <span class="logo-3d-front">Sbagh <span class="logo-accent">Darb</span></span>
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-8">
+                        <a href="#" class="text-gray-900 px-3 py-2 rounded-md text-lg font-bold border-b-2 border-blue-500">Accueil</a>
+                        <a href="#" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-lg font-medium">Produits</a>
+                        <a href="#" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-lg font-medium">Solutions</a>
+                        <a href="#" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-lg font-medium">Simulateur</a>
+                        <a href="#" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-lg font-medium">Contact</a>
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-bold transition duration-300">
+                            Catalogue
+                            <i data-feather="download" class="inline ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-gradient text-white">
+        <div class="max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6">Technicien en Peinture Professionnelle au Maroc</h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto">Expertise, qualité et savoir-faire marocain pour tous vos projets de peinture et revêtements</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-bold text-lg transition duration-300">
+                    Nos produits
+                    <i data-feather="chevron-right" class="inline ml-2"></i>
+                </button>
+                <button class="bg-transparent border-2 border-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-bold text-lg transition duration-300">
+                    Contactez-nous
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Solutions Section -->
+    <div class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold text-gray-900 text-center mb-12">Nos Solutions Professionnelles</h2>
+            
+            <!-- Solution 1 -->
+            <div class="solution-card bg-gray-50 rounded-2xl overflow-hidden shadow-lg mb-12 flex flex-col md:flex-row">
+                <div class="md:w-1/2">
+                    <img class="w-full h-full object-cover" src="https://www.facop.ma/uploads/switcher/images/5f20133cbf220.jpg" alt="Solution Hydromax">
+                </div>
+                <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Solutions techniques contre l'humidité</h3>
+                        <p class="text-gray-600 mb-6">Expertise et techniques éprouvées pour traiter les problèmes d'humidité dans les murs et sols, avec des solutions adaptées au climat marocain.</p>
+<button class="self-start bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-bold transition duration-300">
+                        En savoir plus
+                    </button>
+                </div>
+            </div>
+
+            <!-- Solution 2 -->
+            <div class="solution-card bg-gray-50 rounded-2xl overflow-hidden shadow-lg mb-12 flex flex-col md:flex-row-reverse">
+                <div class="md:w-1/2">
+                    <img class="w-full h-full object-cover" src="https://www.facop.ma/uploads/switcher/images/60b5f5d69b0c6.jpg" alt="Peinture bord de mer">
+                </div>
+                <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Peinture pour façades maritimes</h3>
+                        <p class="text-gray-600 mb-6">Solutions spécifiques pour les régions côtières marocaines, résistantes au sel et aux conditions climatiques difficiles.</p>
+<button class="self-start bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-bold transition duration-300">
+                        En savoir plus
+                    </button>
+                </div>
+            </div>
+
+            <!-- Solution 3 -->
+            <div class="solution-card bg-gray-50 rounded-2xl overflow-hidden shadow-lg flex flex-col md:flex-row">
+                <div class="md:w-1/2">
+                    <img class="w-full h-full object-cover" src="https://www.facop.ma/uploads/switcher/images/60b64ffaeef69.jpg" alt="Peinture écologique">
+                </div>
+                <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Peintures écologiques adaptées</h3>
+                        <p class="text-gray-600 mb-6">Sélection de peintures respectueuses de l'environnement et de la santé, spécialement adaptées aux besoins des foyers marocains.</p>
+<button class="self-start bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-bold transition duration-300">
+                        En savoir plus
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Products Section -->
+    <div class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold text-gray-900 text-center mb-4">Notre gamme de produits</h2>
+            <p class="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">Découvrez nos différentes catégories de peintures et revêtements professionnels</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img class="w-full h-full object-cover" src="https://www.facop.ma/uploads/categorie/images/5eb2d3ea1b545.jpg" alt="Peintures pour bâtiments">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <img class="h-12 w-12 mr-4" src="https://www.facop.ma/uploads/categorie/icons/5eb2d3ea1b6ea.png" alt="Icon">
+                            <h3 class="text-xl font-bold text-gray-900">Peintures pour bâtiments</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6">Gamme complète pour l'intérieur et l'extérieur des bâtiments résidentiels et commerciaux.</p>
+                        <button class="text-blue-600 font-bold flex items-center">
+                            Voir la gamme
+                            <i data-feather="chevron-right" class="ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img class="w-full h-full object-cover" src="https://www.facop.ma/uploads/categorie/images/5eb2d35a1b0f2.jpg" alt="Peintures décoratives">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <img class="h-12 w-12 mr-4" src="https://www.facop.ma/uploads/categorie/icons/5eb2d35a1b2b3.png" alt="Icon">
+                            <h3 class="text-xl font-bold text-gray-900">Peintures décoratives</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6">Effets spéciaux et finitions uniques pour personnaliser vos espaces intérieurs.</p>
+                        <button class="text-blue-600 font-bold flex items-center">
+                            Voir la gamme
+                            <i data-feather="chevron-right" class="ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img class="w-full h-full object-cover" src="https://www.facop.ma/uploads/categorie/images/5eb2c324067a5.jpg" alt="Peintures écologiques">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <img class="h-12 w-12 mr-4" src="https://www.facop.ma/uploads/categorie/icons/5eb2d2d52e48a.png" alt="Icon">
+                            <h3 class="text-xl font-bold text-gray-900">Peintures écologiques</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6">Formules respectueuses de l'environnement et de la santé, sans COV ni odeurs.</p>
+                        <button class="text-blue-600 font-bold flex items-center">
+                            Voir la gamme
+                            <i data-feather="chevron-right" class="ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img class="w-full h-full object-cover" src="https://www.facop.ma/uploads/categorie/images/5eb2d37cbf9b6.jpg" alt="Peintures Industrielles">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <img class="h-12 w-12 mr-4" src="https://www.facop.ma/uploads/categorie/icons/5eb2d37cbfbaa.png" alt="Icon">
+                            <h3 class="text-xl font-bold text-gray-900">Peintures Industrielles</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6">Solutions techniques pour les environnements industriels exigeants.</p>
+                        <button class="text-blue-600 font-bold flex items-center">
+                            Voir la gamme
+                            <i data-feather="chevron-right" class="ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img class="w-full h-full object-cover" src="https://www.facop.ma/uploads/categorie/images/5eb2c30cb8758.jpg" alt="Revêtements pour sols">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <img class="h-12 w-12 mr-4" src="https://www.facop.ma/uploads/categorie/icons/5eb2d18bbc239.png" alt="Icon">
+                            <h3 class="text-xl font-bold text-gray-900">Revêtements pour sols</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6">Gamme complète pour tous types de sols, du résidentiel à l'industriel.</p>
+                        <button class="text-blue-600 font-bold flex items-center">
+                            Voir la gamme
+                            <i data-feather="chevron-right" class="ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img class="w-full h-full object-cover" src="https://www.facop.ma/uploads/categorie/images/5eb2d3c77f748.jpg" alt="Peintures carrosseries">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <img class="h-12 w-12 mr-4" src="https://www.facop.ma/uploads/categorie/icons/5eb2d3c77f90c.png" alt="Icon">
+                            <h3 class="text-xl font-bold text-gray-900">Peintures carrosseries</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6">Gamme professionnelle pour la réparation et la finition automobile.</p>
+                        <button class="text-blue-600 font-bold flex items-center">
+                            Voir la gamme
+                            <i data-feather="chevron-right" class="ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- App Section -->
+    <div class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-blue-600 rounded-2xl overflow-hidden shadow-2xl">
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                        <h2 class="text-3xl font-bold text-white mb-6">Téléchargez notre application mobile</h2>
+                        <p class="text-blue-100 mb-8">Consultez nos catalogues, utilisez le simulateur, calculez le rendement peinture et bien d'autres fonctionnalités exclusives !</p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="https://play.google.com/store/apps/details?id=com.facop.facop" class="bg-black hover:bg-gray-900 text-white px-6 py-3 rounded-lg font-bold transition duration-300 flex items-center justify-center">
+                                <img class="h-8 mr-3" src="https://www.facop.ma/assets/images/google_play.png" alt="Google Play">
+                            </a>
+                            <a href="https://apps.apple.com/fr/app/facop-peintures/id1404907304" class="bg-black hover:bg-gray-900 text-white px-6 py-3 rounded-lg font-bold transition duration-300 flex items-center justify-center">
+                                <img class="h-8 mr-3" src="https://www.facop.ma/assets/images/appstore.png" alt="App Store">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 flex items-center justify-center p-8">
+                    <img class="h-64 md:h-80" src="http://static.photos/workspace/640x360/456" alt="Sbagh Darb au travail">
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                            <div class="flex justify-between h-24 items-center">
+                                <div class="flex-shrink-0 flex items-center">
+                                    <a href="#" class="logo-3d" aria-label="Sbagh Darb">
+                                        <span class="logo-3d-front">Sbagh <span class="logo-accent">Darb</span></span>
+                                    </a>
+                                </div>
+</div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Produits</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Peintures bâtiment</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Peintures industrielles</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Revêtements sols</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Peintures automobiles</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Solutions</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Enduit Hydromax</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Peintures bord de mer</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Revêtements anticorrosion</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Peintures écologiques</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-gray-400"><i data-feather="phone" class="mr-2"></i> +212 522 22 22 22</li>
+                        <li class="flex items-center text-gray-400"><i data-feather="mail" class="mr-2"></i> contact@facop.ma</li>
+                        <li class="flex items-center text-gray-400"><i data-feather="map-pin" class="mr-2"></i> Casablanca, Maroc</li>
+                    </ul>
+                    <div class="flex mt-4 space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-feather="facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-feather="instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-feather="twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-feather="linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400">© 2023 Facop Peintures. Tous droits réservés.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white">Mentions légales</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Politique de confidentialité</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Conditions générales</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>
